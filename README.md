@@ -6,17 +6,9 @@ Yocto integration layers for MemryX SDK on Renesas RZ/G3E platform.
 
 Builds MX3 M.2 PCIe kernel module.
 
-1. Add `meta-mx3-driver` path to `conf/bblayers.conf`
-2. Include `memx-cascade-plus-pcie` target in build
-
-**NOTE**: ARM/RISCV systems may require device tree modifications for BAR/MSIX configuration. Contact MemryX for platform-specific support.
-
 ## meta-memx-runtime
 
 Builds [MxAccl C++ Runtime Library](https://developer.memryx.com/api/accelerator/cpp.html) and [libmemx](https://developer.memryx.com/api/driver/driver.html) binary.
-
-1. Add `meta-memx-runtime` path to `conf/bblayers.conf`
-2. Include `memx-runtime` and `memx-bench` targets in build
 
 ## Build Instructions
 
