@@ -252,14 +252,14 @@ Reinstall microSD on SOM and boot.
 Download and extract DFP:
 
 ```bash
-wget developer.memryx.com/model_explorer/2p2/YOLO_v8_small_640_640_3_onnx.zip
+wget developer.memryx.com/model_explorer/2p2/YOLO26_nano_640_640_3_onnx.zip
 unzip YOLO_v8_small_640_640_3_onnx.zip
 ```
 
 Run inference application (USB camera at `/dev/video0`):
 
 ```bash
-/usr/bin/main --video_paths cam:0 -d YOLO_v8_small_640_640_3_onnx.dfp --show
+/usr/bin/main --video_paths cam:0 -d YOLO26_nano_640_640_3_onnx.dfp --show
 ```
 
 Omit `--show` to disable rendering. Exit: `CTRL+C`
