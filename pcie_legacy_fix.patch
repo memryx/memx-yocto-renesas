@@ -1,0 +1,30 @@
+diff --git a/arch/arm64/boot/dts/renesas/r9a09g047.dtsi b/arch/arm64/boot/dts/renesas/r9a09g047.dtsi
+index 8226a4162856..5bdf8850b02b 100644
+--- a/arch/arm64/boot/dts/renesas/r9a09g047.dtsi
++++ b/arch/arm64/boot/dts/renesas/r9a09g047.dtsi
+@@ -2521,17 +2521,21 @@ pcie0: pcie@13400000 {
+ 			ranges = <0x02000000 0x0 0x30000000 0x0 0x30000000 0x0 0x08000000>,
+ 				 <0x42000000 0x4 0x48000000 0x4 0x48000000 0x1 0x00000000>;
+ 			dma-ranges = <0x42000000 0 0x48000000 0 0x48000000 0 0xF8000000>;
+-			interrupts = <GIC_SPI 796 IRQ_TYPE_LEVEL_HIGH>;
++			interrupts = <GIC_SPI 792 IRQ_TYPE_LEVEL_HIGH>;
+ 			#interrupt-cells = <1>;
+-			interrupt-map-mask = <0 0 0 0>;
+-			interrupt-map = <0 0 0 0 &gic GIC_SPI 796 IRQ_TYPE_LEVEL_HIGH>;
++			interrupt-controller;
++			interrupt-map-mask = <0 0 0 7>;
++			interrupt-map = <0 0 0 1 &gic GIC_SPI 792 IRQ_TYPE_LEVEL_HIGH>,
++							<0 0 0 2 &gic GIC_SPI 792 IRQ_TYPE_LEVEL_HIGH>,
++							<0 0 0 3 &gic GIC_SPI 792 IRQ_TYPE_LEVEL_HIGH>,
++							<0 0 0 4 &gic GIC_SPI 792 IRQ_TYPE_LEVEL_HIGH>;
+ 			bus-range = <0x0 0xff>;
+ 			linux,pci-domain = <0x0>;
+ 			#address-cells = <3>;
+ 			#size-cells = <2>;
+ 			pcie,channel = <0>;
+ 			renesas,pcie-sys = <&sys>;
+-			status = "disabled";
++			status = "okay";
+ 		};
+ 
+ 		pcie0_ep: pcie-ep@13400000 {
