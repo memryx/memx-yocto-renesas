@@ -152,7 +152,7 @@ cd tmp/deploy/images/smarc-rzg3e/
 sudo bmaptool copy --bmap <wic_image>.wic.bmap <wic _image>.wic.gz /dev/sda
 ```
 
-### 7. Flash VMX-004 M.2 Module
+### 7. Flash MX3 M.2 Module
 
 Download firmware `cascade_4chips_flash.bin` from https://github.com/memryx/mx3_driver_pub/tree/sdk2p2/firmware
 
