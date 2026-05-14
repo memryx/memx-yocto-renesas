@@ -84,15 +84,6 @@ poky/oe-init-build-env build
 
 ### 4. Add MemryX and Feature Layers
 
-```bash
-bitbake-layers add-layer /path/to/memx-yocto-renesas/meta-memx-runtime
-bitbake-layers add-layer /path/to/memx-yocto-renesas/meta-mx3-driver
-bitbake-layers add-layer ../meta-rz-features/meta-rz-graphics
-bitbake-layers add-layer ../meta-rz-features/meta-rz-codecs
-```
-
-### 4. Add MemryX and Feature Layers
-
 From build directory (`~/rzg3e_bsp_v1.0.0/build/`), add layers to `bblayers.conf`:
 
 ```bash
